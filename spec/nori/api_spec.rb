@@ -21,7 +21,7 @@ describe Nori do
 
     it "defaults to not change XML tags" do
       xml = '<userResponse id="1"><accountStatus>active</accountStatus></userResponse>'
-      nori.parse(xml).should == { "userResponse" => { "@id" => "1", "accountStatus" => "active" } }
+      nori.parse(xml).should == { "userResponse" => { :@id => "1", "accountStatus" => "active" } }
     end
 
     it "raises when passed unknown global options" do

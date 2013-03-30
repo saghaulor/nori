@@ -113,7 +113,7 @@ class Nori
 
     def prefixed_attributes
       attributes.inject({}) do |memo, (key, value)|
-        memo[prefixed_attribute_name("@#{key}")] = value
+        memo[prefixed_attribute_name("@#{key}".to_sym)] = value
         memo
       end
     end
